@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include social_studio *.css
+recursive-include social_studio *.csv
+recursive-include social_studio *.html
+recursive-include social_studio *.ico
+recursive-include social_studio *.js
+recursive-include social_studio *.json
+recursive-include social_studio *.md
+recursive-include social_studio *.png
+recursive-include social_studio *.py
+recursive-include social_studio *.svg
+recursive-include social_studio *.txt
+recursive-exclude social_studio *.pyc
