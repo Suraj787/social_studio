@@ -40,7 +40,7 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
+   "is_query_report": 1,
    "label": "Attendance Sheet",
    "link_count": 0,
    "link_to": "Monthly Attendance Sheet",
@@ -69,7 +69,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-08-15 21:43:19.719682",
+ "modified": "2022-08-29 13:56:46.989182",
  "modified_by": "Administrator",
  "module": "social Studio",
  "name": "Employee Dashboard",
