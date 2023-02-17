@@ -33,21 +33,21 @@ def get_columns() -> List[Dict]:
 			"label": _("Leave Type"),
 			"fieldtype": "Link",
 			"fieldname": "leave_type",
-			"width": 200,
+			"width": 150,
 			"options": "Leave Type",
 		},
 		{
 			"label": _("Employee"),
 			"fieldtype": "Link",
 			"fieldname": "employee",
-			"width": 100,
+			"width": 150,
 			"options": "Employee",
 		},
 		{
 			"label": _("Employee Name"),
 			"fieldtype": "Dynamic Link",
 			"fieldname": "employee_name",
-			"width": 100,
+			"width": 150,
 			"options": "employee",
 		},
 		{
@@ -60,7 +60,7 @@ def get_columns() -> List[Dict]:
 			"label": _("New Leave(s) Allocated"),
 			"fieldtype": "float",
 			"fieldname": "leaves_allocated",
-			"width": 200,
+			"width": 170,
 		},
 		{
 			"label": _("Leave(s) Taken"),
@@ -81,7 +81,7 @@ def get_columns() -> List[Dict]:
 			"width": 150,
 		},
 		{
-			"label": _("View"),
+			"label": _("View Applications"),
 			"fieldtype": "button",
 			"fieldname": "view_button",
 			"width": 150,
@@ -144,7 +144,8 @@ def get_data(filters: Filters) -> List:
 				row.closing_balance = new_allocation + opening - (row.leaves_expired + leaves_taken)
 				row.indent = 1
 				s = ",".join([row.employee, filters.get("from_date"), filters.get("to_date")])
-				row.view_button = f"""<button type ='button' data='{s}' onClick='redirect_list_view(this.getAttribute("data"))'>View</button>"""
+				row.view_button = f"""<button type ='button' class="btn btn-xs btn-info" data='{s}'
+				onClick='redirect_list_view(this.getAttribute("data"))'>View</button>"""
 
 				data.append(row)
 
