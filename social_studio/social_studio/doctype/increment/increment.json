@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-02-06 14:17:53.670045",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "old_salary",
+  "new_salary"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "old_salary",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Old Salary"
+  },
+  {
+   "fieldname": "new_salary",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "New Salary"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-02-17 12:47:18.913987",
+ "modified_by": "Administrator",
+ "module": "social Studio",
+ "name": "Increment",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
