@@ -17,7 +17,8 @@
   "section_break_7",
   "mistake",
   "warning_letters",
-  "increment_details"
+  "increment_details",
+  "amended_from"
  ],
  "fields": [
   {
@@ -81,11 +82,21 @@
    "fieldtype": "Table",
    "label": "Increment Details",
    "options": "Increment"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Performance",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-02-17 12:09:21.996930",
+ "modified": "2023-02-18 18:38:59.431446",
  "modified_by": "Administrator",
  "module": "social Studio",
  "name": "Employee Performance",
