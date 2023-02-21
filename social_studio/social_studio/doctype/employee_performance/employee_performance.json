@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:employee",
+ "autoname": "EMP-PER-.#####",
  "creation": "2023-02-06 14:18:00.676543",
  "default_view": "List",
  "doctype": "DocType",
@@ -17,8 +17,7 @@
   "section_break_7",
   "mistake",
   "warning_letters",
-  "increment_details",
-  "amended_from"
+  "increment_details"
  ],
  "fields": [
   {
@@ -82,25 +81,16 @@
    "fieldtype": "Table",
    "label": "Increment Details",
    "options": "Increment"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Employee Performance",
-   "print_hide": 1,
-   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-18 18:38:59.431446",
+ "modified": "2023-02-21 12:20:47.675056",
  "modified_by": "Administrator",
  "module": "social Studio",
  "name": "Employee Performance",
- "naming_rule": "By fieldname",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
