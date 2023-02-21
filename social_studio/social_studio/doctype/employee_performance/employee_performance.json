@@ -17,7 +17,8 @@
   "section_break_7",
   "mistake",
   "warning_letters",
-  "increment_details"
+  "increment_details",
+  "amended_from"
  ],
  "fields": [
   {
@@ -26,8 +27,7 @@
    "in_list_view": 1,
    "label": "Employee",
    "options": "Employee",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fetch_from": "employee.employee_name",
@@ -81,12 +81,21 @@
    "fieldtype": "Table",
    "label": "Increment Details",
    "options": "Increment"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Performance",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-21 12:20:47.675056",
+ "modified": "2023-02-21 14:26:10.684033",
  "modified_by": "Administrator",
  "module": "social Studio",
  "name": "Employee Performance",
