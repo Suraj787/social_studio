@@ -17,25 +17,27 @@ class EmployeePerformance(Document):
 
 @frappe.whitelist()
 def create_additional_salary(employee_performance):
-	# Do not always save
-	# get all salaries of this employee desc
-	# salaries = frappe.get_all("Additional Salary", {'employee': employee_performance.employee}, order_by="payroll_date desc")
-	# if the last salary was created in the same month then don't create new salary
-	# if salaries:
-		# last_additional_salary
 	employee_performance = frappe.get_doc("Employee Performance", employee_performance)
 
+	additional_salaries_found = 0
+	salaries = frappe.get_all("Additional Salary", {'employee': employee_performance.employee}, ['employee', 'payroll_date'], order_by="payroll_date desc")
+	if salaries:
+		last_additional_salary = salaries[0]
+		if last_additional_salary.payroll_date.month != employee_performance.date.month or last_additional_salary.payroll_date.year != employee_performance.date.year:
+			additional_salaries_found = 0
+		else:
+			additional_salaries_found = 1
 
 
-	make_additional_salary(employee_performance)
-	if employee_performance.deduct_reserved_fund:
-		make_additional_salary(employee_performance, employee_performance.deduct_reserved_fund)
+	if not additional_salaries_found:
+		make_additional_salary(employee_performance)
+		if employee_performance.deduct_reserved_fund:
+			make_additional_salary(employee_performance, employee_performance.deduct_reserved_fund)
 
 
 
 
 def make_additional_salary(employee_performance, deduct_reserved_fund=0):
-	print('*************locals()***************', locals())
 	additional_salary = frappe.new_doc("Additional Salary")
 	additional_salary.employee = employee_performance.employee
 	additional_salary.payroll_date = employee_performance.date
@@ -50,4 +52,6 @@ def make_additional_salary(employee_performance, deduct_reserved_fund=0):
 
 
 	additional_salary.save()
+	additional_salary.submit()
+
 	return additional_salary.name
