@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "TEL-.#####",
+ "creation": "2023-03-01 13:51:06.912310",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "calling_details_section",
+  "date",
+  "from",
+  "to",
+  "executive",
+  "agent_calling_from",
+  "column_break_4",
+  "data",
+  "data_provider_name",
+  "telegram_id",
+  "number_bleongs_to",
+  "call_status",
+  "column_break_8",
+  "brand",
+  "is_msg_send",
+  "mobile_number",
+  "gender",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "calling_details_section",
+   "fieldtype": "Section Break",
+   "label": "Calling Details"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "From",
+   "options": "\nPRP\nWhatsApp Call\nDirect Call\nTelegram Msg.\nWhats App Msg",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "To",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "executive",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Executive",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agent_calling_from",
+   "fieldtype": "Select",
+   "label": "Agent ",
+   "options": "\nNaina\nJaya\nReena\nTrisha\nSarika\nRadha\nSiya",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Select",
+   "label": "Data",
+   "options": "New Users\nExisting Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_bleongs_to",
+   "fieldtype": "Select",
+   "label": "Number Bleongs To",
+   "options": "Own\nFamily Member\nFriend",
+   "reqd": 1
+  },
+  {
+   "fieldname": "call_status",
+   "fieldtype": "Select",
+   "label": "Call Status",
+   "options": "\nCall Not Received\nCall Not Reachable\nNot Interested\nCall Back\nInvalid Number\nInterested\nConverted\nOut Of Coverage Area\nOnly Message",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "max_height": "50px"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Select",
+   "label": "Brand",
+   "options": "\nKhel 111\nJitoDaily",
+   "reqd": 1
+  },
+  {
+   "fieldname": "is_msg_send",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Is Msg Send",
+   "options": "\nWhatsApp Msg\nText Msg\nNot Sure\nTelegram Msg.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "MN Number"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Female\nMale"
+  },
+  {
+   "fieldname": "telegram_id",
+   "fieldtype": "Data",
+   "label": "Telegram   Id",
+   "unique": 1
+  },
+  {
+   "fieldname": "data_provider_name",
+   "fieldtype": "Select",
+   "label": "Data Provider Name",
+   "options": "\nPremium Data\nM15 Data\nM51 Data\nJitoDaily Data\nLB Data\nDream11\nWhatsapp (6565)\nWhatsapp Business (0985)",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-23 14:59:20.512426",
+ "modified_by": "Administrator",
+ "module": "social Studio",
+ "name": "Tele Calling Report",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
